@@ -31,4 +31,13 @@ describe('sayHello', function() {
     it('should return the string "Hello, Pat!" when executed', function () {
         expect(sayHello("Pat")).toBe("Hello, Pat!");
     });
+    it('should return the string "Hello, World!" when executed', function () {
+        expect(sayHello(true)).toBe("Hello, World!");
+    });
+    it('should return the string "This is null" when executed', function () {
+        expect(sayHello(null)).toBe("This is null");
+    });
+    it('should return the string "This is an empty string" when executed', function () {
+        expect(sayHello("")).toBe("This is an empty string");
+    });
 });
