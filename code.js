@@ -13,3 +13,12 @@ function sayHello(input) {
     }
     return (`Hello, ${input}!`);
 }
+
+// isFive function
+function isFive(number) {
+    if (number === "5") {
+        return true;
+    }
+    return number === Number;
+}
+//console.log(isFive(5))

@@ -14,7 +14,7 @@ describe('helloWorld', function() { //description is just a label to show what i
       expect(helloWorld()).not.toBe(undefined);
     });
 });
-// EXERCISE 2-6
+// EXERCISE 2-9
 describe('sayHello', function() {
     it('should be a defined function', function() {
         expect(typeof sayHello).toBe('function');
@@ -41,3 +41,18 @@ describe('sayHello', function() {
         expect(sayHello("")).toBe("This is an empty string");
     });
 });
+
+describe('isFive', function() {
+    it('should be a defined function', function() {
+        expect(typeof isFive).toBe('function');
+    })
+    it(`should return a Boolean when called`, function() {
+        expect(typeof isFive()).toBe("boolean");
+    })
+    it(`should return a Boolean value when executed`, function () {
+        expect(isFive(Number)).toBe(true);
+    });
+    it(`should return a Boolean value when executed`, function () {
+        expect(isFive("5")).toBe(true);
+    });
+})
