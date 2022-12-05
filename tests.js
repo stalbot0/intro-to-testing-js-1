@@ -56,3 +56,18 @@ describe('isFive', function() {
         expect(isFive("5")).toBe(true);
     });
 })
+
+describe('isEven', function() {
+    it('should be a defined function', function() {
+        expect(typeof isEven).toBe('function');
+    })
+    it('should return a boolean when called', function() {
+        expect(typeof isEven()).toBe(typeof "boolean");
+    })
+    it('should return a boolean value when executed', function () {
+       expect(isEven()).toBe('boolean');
+    })
+    it('should return a string "NaN" when executed', function () {
+        expect(isEven(NaN)).toBe("NaN");
+    })
+})

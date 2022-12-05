@@ -21,4 +21,12 @@ function isFive(number) {
     }
     return number === Number;
 }
-//console.log(isFive(5))
+
+// isEven
+function isEven(input) {
+    if (typeof input === 'string') {
+        return "NaN";
+    }
+    return input % 2 === 0;
+}
+console.log(isEven());
