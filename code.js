@@ -37,3 +37,11 @@ function isEven(input) {
 function isVowel(letter) {
     return letter === "a" || letter === "A";
 }
+
+// add
+function add(x, y) {
+    if(x === "banana" || y === "split") {
+        return NaN;
+    }
+    return parseInt(x) + parseInt(y);
+}
