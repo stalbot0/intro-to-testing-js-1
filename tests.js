@@ -58,16 +58,61 @@ describe('isFive', function() {
 })
 
 describe('isEven', function() {
-    it('should be a defined function', function() {
+    it('is a defined function', function() {
         expect(typeof isEven).toBe('function');
-    })
-    it('should return a boolean when called', function() {
-        expect(typeof isEven()).toBe(typeof "boolean");
-    })
-    it('should return a boolean value when executed', function () {
-       expect(isEven()).toBe('boolean');
-    })
-    it('should return a string "NaN" when executed', function () {
-        expect(isEven(NaN)).toBe("NaN");
-    })
+    });
+    it('returns a boolean value when called', function() {
+        expect(typeof isEven(2)).toBe("boolean");
+    });
+    it('returns true when executed with isEven(2)', function () {
+       expect(isEven(2)).toBe(true);
+    });
+    it('returns true when executed with isEven(-4)', function () {
+        expect(isEven(-4)).toBe(true);
+    });
+    it('returns false when executed with isEven(3)', function () {
+        expect(isEven(3)).toBe(false);
+    });
+    it('returns false when called with isEven("banana")', function () {
+        expect(isEven('banana')).not.toBe(typeof "string");
+    });
+    it('returns true when called with isEven("8")', function () {
+        expect(isEven("8")).toBe(true);
+    });
+    it('returns false when called with isEven(Infinity)', function () {
+        expect(isEven(Infinity)).toBe(false);
+    });
+    it('returns false when called with a boolean input isEven(true) or isEven(false)', function () {
+        expect(isEven(true, false)).toBe(false);
+    });
+    it('returns false when called without an argument', function () {
+        expect(isEven()).toBe(false);
+    });
 })
+
+describe('isVowel', function() {
+    it('is a defined function', function() {
+        expect(typeof isVowel).toBe('function');
+    });
+    it('returns a boolean value when called', function() {
+        expect(typeof isVowel()).toBe("boolean");
+    });
+    it('returns true when executed with "a"', function() {
+        expect(isVowel('a')).toBe(true);
+    });
+    it('returns true when executed with "A"', function() {
+        expect(isVowel('A')).toBe(true);
+    });
+    it('returns false when executed with the number 4', function() {
+        expect(isVowel(4)).toBe(false);
+    });
+    it('returns false when executed with the boolean value true or false', function() {
+        expect(isVowel(true, false)).toBe(false);
+    });
+    it('returns false when executed with the string literal "banana"', function() {
+        expect(isVowel('banana')).toBe(false);
+    });
+    it('returns false when executed with no argument', function() {
+        expect(isVowel()).toBe(false);
+    });
+});

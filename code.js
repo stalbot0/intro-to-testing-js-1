@@ -24,9 +24,16 @@ function isFive(number) {
 
 // isEven
 function isEven(input) {
-    if (typeof input === 'string') {
-        return "NaN";
+    if(input % 2 === 0) {
+        return true;
     }
-    return input % 2 === 0;
+    if(typeof input !== "number" || input === Infinity || typeof input === "boolean") {
+        return false;
+    }
+    return false;
+}                       // console.log(isEven());
+
+// isVowel
+function isVowel(letter) {
+    return letter === "a" || letter === "A";
 }
-console.log(isEven());
