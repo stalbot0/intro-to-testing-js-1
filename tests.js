@@ -137,6 +137,12 @@ describe('add', function() {
         expect(add('-4', "10")).toBe(6);
     });
     it('returns NaN when executed with ("banana", "split")', function() {
-        expect(add('banana', "split")).toBe(NaN);
+        expect(add('banana', "split")).not.toBe(Number);
+    });
+    it('returns NaN when executed with (2, "apples")', function() {
+        expect(add(2, "apples")).not.toBe(Number);
+    });
+    it('returns NaN when executed with ()', function() {
+        expect(add()).not.toBe(Number);
     });
 });

@@ -40,7 +40,7 @@ function isVowel(letter) {
 
 // add
 function add(x, y) {
-    if(x === "banana" || y === "split") {
+    if(isNaN(x) || isNaN(y)){
         return NaN;
     }
     return parseInt(x) + parseInt(y);
